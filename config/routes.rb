@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root 'altcoin-matome#index'
+  root 'matomes#index'
 end
