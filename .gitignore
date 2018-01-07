@@ -13,3 +13,5 @@
 !/log/.keep
 !/tmp/.keep
 public/uploads/*
+
+tmp/pids/server.pid
