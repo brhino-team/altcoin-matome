@@ -1,3 +1,7 @@
+<% if user_signed_in? %>
+  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<% end %>
+
 <div class="row hidden-xs topper">
   <div class="col-xs-7 col-sm-7">
     <h1>altcoinまとめ</h1>
