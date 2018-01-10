@@ -17,3 +17,5 @@ public/uploads/*
 tmp/pids/server.pid
 
 config/secrets.yml
+
+db/development.sqlite3
