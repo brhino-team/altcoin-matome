@@ -54,21 +54,27 @@
   		        <div class="row">
   		            <div class="col-sm-6 col-md-4">
                     <% if article.thum.present? %>
-                      <%= image_tag article.thum.url, width: 260, height: 125 %>
+                      <%= link_to article_path(article) do %>
+                        <%= image_tag article.thum.url, width: 260, height: 125 %>
+                      <% end %>
                     <% else %>
-                      <img class="media-object" src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" alt="..." width="260", height="125">
+                      <%= link_to article_path(article) do %>
+                        <img class="media-object" src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" alt="..." width="260", height="125">
+                      <% end %>
                     <% end %>
   		            </div>
   		            <div class="col-sm-6 col-md-8">
   		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
-  		                <h4><%= article.title %></h4>
+                      <%= link_to article_path(article) do %>
+  		                  <h4><%= article.title %></h4>
+                      <% end %>
                       <p><%== article.body.truncate(60) %></p>
   		                <section>
   		                    <i class="glyphicon glyphicon-folder-open"></i>ジャンル
   		                    <!-- <i class="glyphicon glyphicon-user"></i>Hamada -->
   		                    <i class="glyphicon glyphicon-calendar"></i><%= article.created_at.strftime('%Y/%m/%d') %>
   		                    <i class="glyphicon glyphicon-eye-open"></i>PV数
-  		                    <a href="#" class="btn btn-default btn-sm pull-right">More ... </a>
+                          <%= link_to  'More...', article_path(article) , class: "btn btn-default btn-sm pull-right" %>
   		                </section>
   		            </div>
   		        </div>
