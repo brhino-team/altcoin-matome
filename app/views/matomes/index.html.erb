@@ -53,7 +53,11 @@
   		    <article>
   		        <div class="row">
   		            <div class="col-sm-6 col-md-4">
-                    <%= image_tag article.thum.url, width: 260, height: 125 %>
+                    <% if article.thum.present? %>
+                      <%= image_tag article.thum.url, width: 260, height: 125 %>
+                    <% else %>
+                      <img class="media-object" src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" alt="..." width="260", height="125">
+                    <% end %>
   		            </div>
   		            <div class="col-sm-6 col-md-8">
   		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
