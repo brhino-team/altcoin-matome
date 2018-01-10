@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20180110122249) do
     t.string   "title",                  null: false
     t.text     "body",                   null: false
     t.integer  "pv",         default: 0
-    t.string   "thum",                   null: false
+    t.string   "thum"
     t.integer  "user_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
