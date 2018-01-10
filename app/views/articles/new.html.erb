@@ -1,0 +1,5 @@
+<%= form_for @article do |f| %>
+<h3>タイトル</h3><%= f.text_field :title, class: "title_area"%>
+  <%= f.cktext_area :body %>
+  <%= f.submit %>
+<% end %>
