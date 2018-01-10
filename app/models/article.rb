@@ -1,3 +1,3 @@
 class Article < ApplicationRecord
-  berlongs_to :user
+  belongs_to :user
 end
