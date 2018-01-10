@@ -49,6 +49,7 @@
   <div class="container2">
   	<div class="row">
       <div>
+        <% @articles.each do |article| %>
   		    <article>
   		        <div class="row">
   		            <div class="col-sm-6 col-md-4">
@@ -56,8 +57,8 @@
   		            </div>
   		            <div class="col-sm-6 col-md-8">
   		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
-  		                <h4>仮想通貨ランキング2018.1.7｜イラン反政府デモ“資産逃がしに”仮想通貨取引増か</h4>
-  		                <p>2018年初めての仮想通貨ランキング。今年スタートして1週間ですが、世界のおかれている状況が変動してきました…</p>
+  		                <h4><%= article.title %></h4>
+                      <p><%== article.body.truncate(60) %></p>
   		                <section>
   		                    <i class="glyphicon glyphicon-folder-open"></i>仮想通貨
   		                    <i class="glyphicon glyphicon-user"></i>Hamada
@@ -68,86 +69,7 @@
   		            </div>
   		        </div>
   		    </article>
-
-  		    <article>
-  		        <div class="row">
-  		            <div class="col-sm-6 col-md-4">
-                    <img src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" width="260" height="125">
-  		            </div>
-  		            <div class="col-sm-6 col-md-8">
-  		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
-  		                <h4>仮想通貨Bitcoin2週間ぶり200万円タッチ｜アルトコインからの策略説とTRON…</h4>
-  		                <p>仮想通貨ビットコインが2週間ぶりに高値になったことで、大口投資家の策略説が流れてきました。ビットコインより安…</p>
-  		                <section>
-  		                    <i class="glyphicon glyphicon-folder-open"></i>altcoin
-  		                    <i class="glyphicon glyphicon-user"></i>Tomaru
-  		                    <i class="glyphicon glyphicon-calendar"></i>2018/01/08
-  		                    <i class="glyphicon glyphicon-eye-open"></i>67090
-  		                    <a href="#" class="btn btn-default btn-sm pull-right">More ... </a>
-  		                </section>
-  		            </div>
-  		        </div>
-  		    </article>
-
-  		    <article>
-  		        <div class="row">
-  		            <div class="col-sm-6 col-md-4">
-                    <img src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" width="260" height="125">
-  		            </div>
-  		            <div class="col-sm-6 col-md-8">
-  		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
-  		                <h4>仮想通貨「2018年の予測と展望part2」ビットコインの価格｜クラッシュか5万ドル…</h4>
-  		                <p>「2018年予測と展望part2」として、今回は誰もが一度は気になる仮想通貨ビットコインへの意見を集めました…</p>
-  		                <section>
-  		                    <i class="glyphicon glyphicon-folder-open"></i>Bitcoin
-  		                    <i class="glyphicon glyphicon-user"></i>Hamada
-  		                    <i class="glyphicon glyphicon-calendar"></i>2018/01/08
-  		                    <i class="glyphicon glyphicon-eye-open"></i>320102
-  		                    <a href="#" class="btn btn-default btn-sm pull-right">More ... </a>
-  		                </section>
-  		            </div>
-  		        </div>
-  		    </article>
-
-  		    <article>
-  		        <div class="row">
-  		            <div class="col-sm-6 col-md-4">
-                    <img src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" width="260" height="125">
-  		            </div>
-  		            <div class="col-sm-6 col-md-8">
-  		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
-  		                <h4>メガバンク、りそな銀行、他約６０の金融送金手数料10分の１｜Ripple(リップル)…</h4>
-  		                <p>仮想通貨Ripple(リップル）XRPの価格上昇が止まりません。ブロックチェーン技術を使い、銀行間の送金手数…</p>
-  		                <section>
-  		                    <i class="glyphicon glyphicon-folder-open"></i>Ripple
-  		                    <i class="glyphicon glyphicon-user"></i>Tomaru
-  		                    <i class="glyphicon glyphicon-calendar"></i>2018/01/08
-  		                    <i class="glyphicon glyphicon-eye-open"></i>333
-  		                    <a href="#" class="btn btn-default btn-sm pull-right">More ... </a>
-  		                </section>
-  		            </div>
-  		        </div>
-  		    </article>
-
-  		    <article>
-  		        <div class="row">
-  		            <div class="col-sm-6 col-md-4">
-                    <img src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" width="260" height="125">
-  		            </div>
-  		            <div class="col-sm-6 col-md-8">
-  		                <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
-  		                <h4>仮想通貨取引所bitFlyer(ビットフライヤー)が株式上場を検討｜最初から上場目標…</h4>
-  		                <p>仮想通貨取引所を運営するbitFlyer（ビットフライヤー）の噂が本当になるかもしれません。bitFlyer…</p>
-  		                <section>
-  		                    <i class="glyphicon glyphicon-folder-open"></i>bitFlyer
-  		                    <i class="glyphicon glyphicon-user"></i>Hamada
-  		                    <i class="glyphicon glyphicon-calendar"></i>2018/01/08
-  		                    <i class="glyphicon glyphicon-eye-open"></i>4395
-  		                    <a href="#" class="btn btn-default btn-sm pull-right">More ... </a>
-  		                </section>
-  		            </div>
-  		        </div>
-  		    </article>
+        <% end %>
   		</div>
   	</div>
   </div>
