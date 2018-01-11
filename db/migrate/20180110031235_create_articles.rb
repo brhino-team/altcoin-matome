@@ -5,6 +5,7 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.text :body, null: false
       t.integer :pv, default: 0
       t.string :thum
+      t.string :user_name, null: false
       t.references :user, foreign_key: true
 
       t.timestamps

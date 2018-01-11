@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20180110122249) do
     t.text     "body",                   null: false
     t.integer  "pv",         default: 0
     t.string   "thum"
+    t.string   "user_name",              null: false
     t.integer  "user_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
