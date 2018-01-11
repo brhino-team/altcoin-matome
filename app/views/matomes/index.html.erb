@@ -70,10 +70,10 @@
                       <% end %>
                       <p><%== article.body.truncate(60) %></p>
   		                <section>
-  		                    <i class="glyphicon glyphicon-folder-open"></i>ジャンル
-  		                    <!-- <i class="glyphicon glyphicon-user"></i>Hamada -->
+  		                    <!-- <i class="glyphicon glyphicon-folder-open"></i>ジャンル -->
+  		                    <i class="glyphicon glyphicon-user"></i>Hamada
   		                    <i class="glyphicon glyphicon-calendar"></i><%= article.created_at.strftime('%Y/%m/%d') %>
-  		                    <i class="glyphicon glyphicon-eye-open"></i>PV数
+  		                    <!-- <i class="glyphicon glyphicon-eye-open"></i>PV数 -->
                           <%= link_to  'More...', article_path(article) , class: "btn btn-default btn-sm pull-right" %>
   		                </section>
   		            </div>
