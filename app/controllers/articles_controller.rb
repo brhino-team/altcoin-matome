@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i(show edit update destroy_confirmation detroy)
+  before_action :set_article, only: %i(show edit update destroy_confirmation destroy)
 
   def new
     if user_signed_in?
@@ -37,6 +37,8 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    @article.destroy
+    redirect_to root_path
   end
 
   private
