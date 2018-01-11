@@ -1,6 +1,7 @@
 <%= form_for @article do |f| %>
-<h3>タイトル</h3><%= f.text_field :title, class: "title_area"%>
-<h3>サムネイル</h3><%= f.text_field :thum %>
+<h3>投稿者</h3><%= f.text_field :user_name, class: "form_area" %>
+<h3>タイトル</h3><%= f.text_field :title, class: "form_area"%>
+<h3>サムネイル画像のリンク</h3><%= f.text_field :thum, class: "form_area" %>
   <%= f.cktext_area :body %>
-  <%= f.submit '記事投稿', class: 'article_sumit' %>
+  <%= f.submit '記事を投稿する', class: 'article_sumit' %>
 <% end %>
