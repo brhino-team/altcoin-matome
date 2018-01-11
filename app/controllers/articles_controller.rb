@@ -2,7 +2,11 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i(show edit update)
 
   def new
-    @article = Article.new
+    if user_signed_in?
+      @article = Article.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
@@ -18,6 +22,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    redirect_to root_path unless user_signed_in?
   end
 
   def update
