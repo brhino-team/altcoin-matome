@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i(show edit update destroy_confirmation destroy)
+  before_action :redirect_root, only: %i(edit destroy_confirmation)
 
   def new
     if user_signed_in?
@@ -22,7 +23,6 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    redirect_to root_path unless user_signed_in?
   end
 
   def update
@@ -45,6 +45,10 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
+
+  def redirect_root
+    redirect_to root_path unless user_signed_in?
+  end    
 
   def article_params
     params.require(:article).permit(:body, :title, :thum)
