@@ -1,4 +1,5 @@
 <%== @article.body %>
 <% if user_signed_in? %>
-  <%= link_to '編集する', edit_article_path(@article), class: "edit" %>
+  <%= link_to '編集する', edit_article_path(@article), class: "admin_link" %>
+  <%= link_to '削除する', destroy_confirmation_article_path(@article), class: "admin_link" %>
 <% end %>
