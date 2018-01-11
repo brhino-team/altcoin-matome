@@ -55,7 +55,7 @@
   		            <div class="col-sm-6 col-md-4">
                     <% if article.thum.present? %>
                       <%= link_to article_path(article) do %>
-                        <%= image_tag article.thum.url, width: 260, height: 125 %>
+                        <%= image_tag article.thum, width: 260, height: 125 %>
                       <% end %>
                     <% else %>
                       <%= link_to article_path(article) do %>
