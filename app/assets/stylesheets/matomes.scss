@@ -73,7 +73,7 @@ article{
     padding: 5px;
 }
 
-.ranking {
+.sidebar {
   float: right;
   width: 250px;
 
@@ -92,7 +92,12 @@ article{
 }
 
 .tag {
-  margin-top: 100px;
+  margin-top: 50px;
+  clear: both;
   float: right;
   width: 250px;
+}
+
+.pagination {
+  margin: 30px 35%;
 }
