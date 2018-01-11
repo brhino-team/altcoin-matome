@@ -48,9 +48,9 @@ class ArticlesController < ApplicationController
 
   def redirect_root
     redirect_to root_path unless user_signed_in?
-  end    
+  end
 
   def article_params
-    params.require(:article).permit(:body, :title, :thum)
+    params.require(:article).permit(:body, :title, :thum, :user_name)
   end
 end
