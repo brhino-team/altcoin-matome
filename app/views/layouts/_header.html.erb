@@ -23,13 +23,13 @@
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav js-nav-add-active-class">
-          <li class="active"><%= link_to 'ニュース', root_path %></li>
-          <li><%= link_to '主要コイン', matome_path(1) %></li>
-          <li><%= link_to 'アルトコイン', matome_path(2) %></li>
-          <li><%= link_to 'マーケット', matome_path(3) %></li>
-          <li><%= link_to 'マイニング', matome_path(4) %></li>
-          <li><%= link_to 'ICO', matome_path(5) %></li>
-          <li><%= link_to 'その他', matome_path(6) %></li>
+          <li class=" <%= 'active' if "index" == params[:action] %>"><%= link_to 'ニュース', root_path %></li>
+          <li class=" <%= 'active' if "1" == params[:id] %>"><%= link_to '主要コイン', matome_path(1) %></li>
+          <li class=" <%= 'active' if "2" == params[:id] %>"><%= link_to 'アルトコイン', matome_path(2) %></li>
+          <li class=" <%= 'active' if "3" == params[:id] %>"><%= link_to 'マーケット', matome_path(3) %></li>
+          <li class=" <%= 'active' if "4" == params[:id] %>"><%= link_to 'マイニング', matome_path(4) %></li>
+          <li class=" <%= 'active' if "5" == params[:id] %>"><%= link_to 'ICO', matome_path(5) %></li>
+          <li class=" <%= 'active' if "6" == params[:id] %>"><%= link_to 'その他', matome_path(6) %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right hidden-xs">
           <a type="button" class="navbar-btn btn btn-gradient-blue" am-latosans="bold" href="https://susteen7.zendesk.com/hc/en-us">Search</a>
