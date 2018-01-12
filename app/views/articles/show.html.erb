@@ -1,4 +1,17 @@
-<%== @article.body %>
+<%= render 'matomes/mainnews' %>
+
+<div class="line">
+</div>
+
+<div class="article_body">
+  <div class="title">
+    <h1><%= @article.title %></h1>
+  </div>
+  <%== @article.body %>
+</div>
+<div class="article_rank">
+  <%= render 'matomes/sidebar' %>
+</div>
 <% if user_signed_in? %>
   <%= link_to '編集する', edit_article_path(@article), class: "admin_link" %>
   <%= link_to '削除する', article_path(@article), method: :delete, class: "admin_link", data: { :confirm => '削除します。よろしいですか?'} %>

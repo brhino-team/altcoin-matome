@@ -1,0 +1,40 @@
+.line{
+  width: 100%;
+  border: solid 2px rgba(0, 0, 0, 0.7);
+  margin-top: 45px;
+}
+
+
+.article_body{
+  float: left;
+  // margin-left: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  width: 70%;
+  text-align: left;
+  padding-bottom: 80px;
+  border-right: 1px solid black;
+  margin-top: 50px;
+  .title {
+    padding-bottom: 30px;
+    text-align: center;
+    h1{
+      border-bottom: 1px solid gray;
+    }
+  }
+  p{
+    padding-left: 15px;
+    text-align: left;
+  }
+  h2{
+    margin-left: initial;
+    text-align: center;
+  }
+}
+
+.article_rank{
+  float: left;
+  padding-left: 30px;
+  width: 25%;
+  margin-top: 50px;
+}
