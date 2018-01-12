@@ -10,4 +10,8 @@ class MatomesController < ApplicationController
   def altcoin
     @articles = Article.where(category_id: 2).page(params[:page]).per(10)
   end
+
+  def market
+    @articles = Article.where(category_id: 3).page(params[:page]).per(10)
+  end
 end
