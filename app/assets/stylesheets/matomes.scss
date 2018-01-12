@@ -7,6 +7,19 @@ h2 {
 .container2 {
   float: left;
   margin-left: 20px;
+  .thum_body{
+    width: 85%;
+    font-size: 15px;
+    h2{
+      font-size: 15px;
+      margin: initial;
+      display: none;
+    }
+    p{
+      font-size: 15px;
+      width: 85%;
+    }
+  }
 }
 
 .by-author {
