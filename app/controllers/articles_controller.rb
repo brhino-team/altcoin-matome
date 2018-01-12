@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.new(article_params)
+    binding.pry
     if @article.save
       redirect_to root_path
     else
@@ -51,6 +52,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:body, :title, :thum, :user_name)
+    params.require(:article).permit(:body, :title, :thum, :user_name, :category_id)
   end
 end
