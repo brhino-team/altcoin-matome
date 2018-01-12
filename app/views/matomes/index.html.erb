@@ -5,7 +5,7 @@
 		<div class="col-md-5 col-lg-5">
 			<div class="featured-article">
 				<a href="#">
-					<img src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" alt="" class="thumb" width="482" height="301">
+					<img src="https://s3-ap-northeast-1.amazonaws.com/stock-upload/bca4a713dd1b47f9bbfa30978e27c20b_s.jpg" alt="" class="thumb" width="482" height="301">
 				</a>
 				<div class="block-title">
 					<h2>ビットコイン暴落！！！！</h2>
@@ -59,7 +59,7 @@
                       <% end %>
                     <% else %>
                       <%= link_to article_path(article) do %>
-                        <img class="media-object" src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" alt="..." width="260", height="125">
+                        <img class="media-object" src="https://s3-ap-northeast-1.amazonaws.com/stock-upload/bca4a713dd1b47f9bbfa30978e27c20b_s.jpg" alt="..." width="260", height="125">
                       <% end %>
                     <% end %>
   		            </div>
@@ -70,10 +70,10 @@
                       <% end %>
                       <p><%== article.body.truncate(60) %></p>
   		                <section>
-  		                    <i class="glyphicon glyphicon-folder-open"></i><%= article.category.name %>
-  		                    <i class="glyphicon glyphicon-user"></i><%= article.user_name %>
+  		                    <i class="glyphicon glyphicon-folder-open"></i>ジャンル
+  		                    <!-- <i class="glyphicon glyphicon-user"></i>Hamada -->
   		                    <i class="glyphicon glyphicon-calendar"></i><%= article.created_at.strftime('%Y/%m/%d') %>
-  		                    <!-- <i class="glyphicon glyphicon-eye-open"></i>PV数 -->
+  		                    <i class="glyphicon glyphicon-eye-open"></i>PV数
                           <%= link_to  'More...', article_path(article) , class: "btn btn-default btn-sm pull-right" %>
   		                </section>
   		            </div>
