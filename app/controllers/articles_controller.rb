@@ -12,7 +12,6 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.new(article_params)
-    binding.pry
     if @article.save
       redirect_to root_path
     else
