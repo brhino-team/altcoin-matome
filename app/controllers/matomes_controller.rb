@@ -4,6 +4,6 @@ class MatomesController < ApplicationController
   end
 
   def maincoin
-    @articles = Article.where(category_id: 1)
+    @articles = Article.where(category_id: 1).page(params[:page]).per(10)
   end
 end
