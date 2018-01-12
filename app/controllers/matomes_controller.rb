@@ -14,4 +14,8 @@ class MatomesController < ApplicationController
   def market
     @articles = Article.where(category_id: 3).page(params[:page]).per(10)
   end
+
+  def maning
+    @articles = Article.where(category_id: 4).page(params[:page]).per(10)
+  end
 end
