@@ -7,4 +7,14 @@ Rails.application.routes.draw do
       get :destroy_confirmation
     end
   end
+  resources :matomes, only: %i(index) do
+    collection do
+      get :maincoin
+      get :altcoin
+      get :market
+      get :mining
+      get :ico
+      get :others
+    end
+  end
 end
