@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i(show edit update destroy_confirmation destroy)
-  before_action :redirect_root, only: %i(edit destroy_confirmation)
+  before_action :set_article, only: %i(show edit update destroy)
+  before_action :redirect_root, only: %i(edit)
 
   def new
     if user_signed_in?
@@ -31,9 +31,6 @@ class ArticlesController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def destroy_confirmation
   end
 
   def destroy
