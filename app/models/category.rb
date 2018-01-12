@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :arcicle
+  has_many :arcicles
 end
