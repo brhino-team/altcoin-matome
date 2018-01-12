@@ -23,13 +23,13 @@
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav js-nav-add-active-class">
-          <li class="active"><a href="/index.html">ニュース</a></li>
-          <li><a href="/markets.html">主要コイン</a></li>
-          <li><a href="/markets.html">アルトコイン</a></li>
-          <li><a href="/buy.html">マーケット</a></li>
-          <li><a href="/buy.html">マイニング</a></li>
-          <li><a href="/svstrike.html">ICO</a></li>
-          <li><a href="/contact.html">その他</a></li>
+          <li class="active"><%= link_to 'ニュース', root_path %></li>
+          <li><%= link_to '主要コイン', matome_path(1) %></li>
+          <li><%= link_to 'アルトコイン', matome_path(2) %></li>
+          <li><%= link_to 'マーケット', matome_path(3) %></li>
+          <li><%= link_to 'マイニング', matome_path(4) %></li>
+          <li><%= link_to 'ICO', matome_path(5) %></li>
+          <li><%= link_to 'その他', matome_path(6) %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right hidden-xs">
           <a type="button" class="navbar-btn btn btn-gradient-blue" am-latosans="bold" href="https://susteen7.zendesk.com/hc/en-us">Search</a>
