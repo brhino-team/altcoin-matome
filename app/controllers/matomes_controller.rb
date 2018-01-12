@@ -3,27 +3,8 @@ class MatomesController < ApplicationController
     @articles = Article.order("created_at DESC").page(params[:page]).per(10)
   end
 
-  def maincoin
-    @articles = Article.where(category_id: 1).page(params[:page]).per(10)
+  def show
+    @articles = Article.where(category_id: params[:id]).page(params[:page]).per(10)
   end
 
-  def altcoin
-    @articles = Article.where(category_id: 2).page(params[:page]).per(10)
-  end
-
-  def market
-    @articles = Article.where(category_id: 3).page(params[:page]).per(10)
-  end
-
-  def mining
-    @articles = Article.where(category_id: 4).page(params[:page]).per(10)
-  end
-
-  def ico
-    @articles = Article.where(category_id: 5).page(params[:page]).per(10)
-  end
-
-  def others
-    @articles = Article.where(category_id: 6).page(params[:page]).per(10)
-  end
 end
