@@ -12,7 +12,7 @@
                     <% end %>
                   <% else %>
                     <%= link_to article_path(article) do %>
-                      <img class="media-object" src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" alt="..." width="260", height="125">
+                      <img class="media-object" src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" alt="..." width="100%", height="100%">
                     <% end %>
                   <% end %>
                 </div>
@@ -21,7 +21,9 @@
                     <%= link_to article_path(article) do %>
                       <h4><%= article.title %></h4>
                     <% end %>
-                    <p><%== article.body.truncate(60) %></p>
+                    <div class="testtest">
+                      <%== article.body.truncate(100) %>
+                    </div>
                     <section>
                         <i class="glyphicon glyphicon-folder-open"></i><%= article.category.name %>
                         <i class="glyphicon glyphicon-user"></i><%= article.user_name %>
