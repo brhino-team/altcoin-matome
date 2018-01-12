@@ -3,7 +3,7 @@
 <h3>タイトル</h3><%= f.text_field :title, class: "form_area"%>
 <h3>サムネイル画像のリンク</h3><%= f.text_field :thum, class: "form_area" %>
 <h3>記事のジャンル</h3>
-  <%= f.collection_check_boxes(:category_id, Category.all, :id, :name) %>
+  <%= f.select :category_id, Category.all.collect { |c| [ c.name, c.id ] }, {class: 'form-control'} %>
   <%= f.cktext_area :body %>
   <%= f.submit '記事を更新する', class: 'article_sumit' %>
 <% end %>
