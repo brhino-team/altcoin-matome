@@ -21,8 +21,8 @@
                     <%= link_to article_path(article) do %>
                       <h4><%= article.title %></h4>
                     <% end %>
-                    <div class="testtest">
-                      <%== article.body.truncate(100) %>
+                    <div class="thum_body">
+                      <%== strip_tags(article.body.gsub(/(\s)/," ")).truncate(100) %>
                     </div>
                     <section>
                         <i class="glyphicon glyphicon-folder-open"></i><%= article.category.name %>
