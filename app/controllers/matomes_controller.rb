@@ -22,4 +22,8 @@ class MatomesController < ApplicationController
   def ico
     @articles = Article.where(category_id: 5).page(params[:page]).per(10)
   end
+
+  def others
+    @articles = Article.where(category_id: 6).page(params[:page]).per(10)
+  end
 end
