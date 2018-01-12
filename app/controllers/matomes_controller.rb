@@ -15,7 +15,7 @@ class MatomesController < ApplicationController
     @articles = Article.where(category_id: 3).page(params[:page]).per(10)
   end
 
-  def maning
+  def mining
     @articles = Article.where(category_id: 4).page(params[:page]).per(10)
   end
 
