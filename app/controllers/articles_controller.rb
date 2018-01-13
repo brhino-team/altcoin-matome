@@ -39,6 +39,10 @@ class ArticlesController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @articles = Article.where('title LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(10)
+  end
+
   private
   def set_article
     @article = Article.find(params[:id])
