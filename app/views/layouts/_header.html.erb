@@ -32,7 +32,10 @@
           <li class=" <%= 'active' if "6" == params[:id] %>"><%= link_to 'その他', matome_path(6) %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right hidden-xs">
-          <a type="button" class="navbar-btn btn btn-gradient-blue" am-latosans="bold" href="https://susteen7.zendesk.com/hc/en-us">Search</a>
+          <%= form_tag('/articles/search', method: :get) do %>
+            <%= text_field_tag :keyword %>
+            <%= submit_tag '検索', class: "navbar-btn btn btn-gradient-blue" %>
+          <% end %>
         </ul>
       </div>
     </div>
