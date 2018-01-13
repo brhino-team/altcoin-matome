@@ -1,40 +1,43 @@
-<h2><記事一覧></h2>
-<div class="col-sm-12 col-md-8 col-lg-9 container2">
-  <div class="row">
-    <div>
-      <% @articles.each do |article| %>
-        <article>
-            <div class="row">
-                <div class="col-sm-12 col-md-4">
-                  <% if article.thum.present? %>
-                    <%= link_to article_path(article) do %>
-                      <%= image_tag article.thum, width: 260, height: 125 %>
+<div class="main-article">
+
+  <div class="col-sm-12 col-md-7 col-lg-8 container2">
+    <h2><記事一覧></h2>
+    <div class="row">
+      <div>
+        <% @articles.each do |article| %>
+          <article>
+              <div class="row">
+                  <div class="col-sm-12 col-md-4">
+                    <% if article.thum.present? %>
+                      <%= link_to article_path(article) do %>
+                        <%= image_tag article.thum, width: 260, height: 125 %>
+                      <% end %>
+                    <% else %>
+                      <%= link_to article_path(article) do %>
+                        <img class="media-object" src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" alt="..." width="100%", height="100%">
+                      <% end %>
                     <% end %>
-                  <% else %>
-                    <%= link_to article_path(article) do %>
-                      <img class="media-object" src="http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg" alt="..." width="100%", height="100%">
-                    <% end %>
-                  <% end %>
-                </div>
-                <div class="col-sm-6 col-md-8">
-                    <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
-                    <%= link_to article_path(article) do %>
-                      <h4><%= article.title %></h4>
-                    <% end %>
-                    <div class="thum_body">
-                      <%== strip_tags(article.body.gsub(/(\s)/," ")).truncate(100) %>
-                    </div>
-                    <section>
-                        <i class="glyphicon glyphicon-folder-open"></i><%= article.category.name %>
-                        <i class="glyphicon glyphicon-user"></i><%= article.user_name %>
-                        <i class="glyphicon glyphicon-calendar"></i><%= article.created_at.strftime('%Y/%m/%d') %>
-                        <!-- <i class="glyphicon glyphicon-eye-open"></i>PV数 -->
-                        <%= link_to  'More...', article_path(article) , class: "btn btn-default btn-sm pull-right" %>
-                    </section>
-                </div>
-            </div>
-        </article>
-      <% end %>
+                  </div>
+                  <div class="col-sm-6 col-md-8">
+                      <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
+                      <%= link_to article_path(article) do %>
+                        <h4><%= article.title %></h4>
+                      <% end %>
+                      <div class="thum_body">
+                        <%== strip_tags(article.body.gsub(/(\s)/," ")).truncate(100) %>
+                      </div>
+                      <section>
+                          <i class="glyphicon glyphicon-folder-open"></i><%= article.category.name %>
+                          <i class="glyphicon glyphicon-user"></i><%= article.user_name %>
+                          <i class="glyphicon glyphicon-calendar"></i><%= article.created_at.strftime('%Y/%m/%d') %>
+                          <!-- <i class="glyphicon glyphicon-eye-open"></i>PV数 -->
+                          <%= link_to  'More...', article_path(article) , class: "btn btn-default btn-sm pull-right" %>
+                      </section>
+                  </div>
+              </div>
+          </article>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
