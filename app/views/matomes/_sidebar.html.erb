@@ -1,4 +1,11 @@
 <div class="col-sm-12 col-md-4 col-lg-3 sidebar">
+  <p>
+    ここにも広告ここにも広告ここにも広告ここにも広告ここにも広告
+    ここにも広告ここにも広告ここにも広告ここにも広告ここにも広告
+    ここにも広告ここにも広告ここにも広告ここにも広告ここにも広告
+    ここにも広告ここにも広告ここにも広告ここにも広告ここにも広告
+    ここにも広告ここにも広告
+  </p>
   <h3 class="popular">人気記事</h3>
   <div class="contents_s">
     <div class="access_rank_post">
@@ -11,7 +18,19 @@
           </ul>
           <div id="disp_rank">
             <div class="column">
-              <span class="rank">1</span>
+              <% @articles.first(3).each.with_index(1) do | article, i | %>
+                <%= link_to article_path(article) do %>
+                    <h4><%= i %>.<%= article.title %></h4>
+                    <p><%= article.user_name %></p>
+                  <% end %>
+              <% end %>
+
+
+
+
+
+
+              <!--
               <a href="#">
                   <img src="https://pbs.twimg.com/profile_images/378800000220029324/fe66faeca20115da8566e51d83447ead_400x400.jpeg" alt="" width="100" height="100"/>
                 <h5>仮想通貨関係「2018年予測と展望」part1｜ICO真の価値・Bitcoinで日本…</h3>
@@ -44,7 +63,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="tag">
     <h3>注目のキーワード</h3>
     <a href="#"><span class="label label-info">仮想通貨</span></a>
@@ -60,5 +79,11 @@
     <a href="#"><span class="label label-info">イーサリアム</span></a>
     <a href="#"><span class="label label-info">投資</span></a>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>

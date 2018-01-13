@@ -89,6 +89,9 @@ article{
 .sidebar {
   float: right;
   margin-bottom: 50px;
+  p{
+    padding-left: 15px;
+  }
 
   .popular {
     text-align: center;
@@ -106,9 +109,6 @@ article{
 
 .tag {
   margin-top: 50px;
-  clear: both;
-  float: right;
-  width: 250px;
 }
 
 .pagination {
