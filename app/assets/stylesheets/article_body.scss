@@ -1,16 +1,10 @@
-.line{
-  width: 100%;
-  border: solid 2px rgba(0, 0, 0, 0.7);
-  margin-top: 45px;
-}
-
 
 .article_body{
   float: left;
   padding: 0 30px 80px 30px;
-
   text-align: left;
   border-right: 1px solid black;
+  border-left: 1px solid black;
   margin-top: 50px;
   .title {
     padding-bottom: 30px;
