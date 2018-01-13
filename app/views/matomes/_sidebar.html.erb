@@ -6,17 +6,17 @@
     <div class="access_rank_post">
       <div class="side_postlist">
         <div class="collapse navbar-collapse" id="nav_target">
-          <ul class="nav navbar-nav" style="float:initial">
+          <!-- <ul class="nav navbar-nav" style="float:initial">
             <li class="active"><a href="#">Daily</a></li>
             <li><a href="#">Weekly</a></li>
             <li><a href="#">Monthly</a></li>
-          </ul>
+          </ul> -->
           <div id="disp_rank">
             <div class="column">
               <% @articles.first(3).each.with_index(1) do | article, i | %>
                 <%= link_to article_path(article) do %>
-                    <h4><%= i %>.<%= article.title %></h4>
-                    <p><%= article.user_name %></p>
+                    <h4><%= i %>.<%= article.title %></br><i class="glyphicon glyphicon-user"></i><%= article.user_name %></h4>
+
                   <% end %>
               <% end %>
 
