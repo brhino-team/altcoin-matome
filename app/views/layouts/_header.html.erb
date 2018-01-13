@@ -22,7 +22,7 @@
         </button>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav js-nav-add-active-class">
+        <ul class="nav navbar-nav js-nav-add-active-class list-for-mobile">
           <li class=" <%= 'active' if "index" == params[:action] %>"><%= link_to 'ニュース', root_path %></li>
           <li class=" <%= 'active' if "1" == params[:id] %>"><%= link_to '主要コイン', matome_path(1) %></li>
           <li class=" <%= 'active' if "2" == params[:id] %>"><%= link_to 'アルトコイン', matome_path(2) %></li>
@@ -31,7 +31,7 @@
           <li class=" <%= 'active' if "5" == params[:id] %>"><%= link_to 'ICO', matome_path(5) %></li>
           <li class=" <%= 'active' if "6" == params[:id] %>"><%= link_to 'その他', matome_path(6) %></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right hidden-xs">
+        <ul class="nav navbar-nav navbar-right search-for-mobile">
           <%= form_tag('/articles/search', method: :get) do %>
             <%= text_field_tag :keyword %>
             <%= submit_tag '検索', class: "navbar-btn btn btn-gradient-blue" %>
