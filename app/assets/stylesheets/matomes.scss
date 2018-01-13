@@ -6,7 +6,6 @@ h2 {
 
 .container2 {
   float: left;
-  margin-left: 20px;
   .thum_body{
     width: 85%;
     font-size: 15px;
@@ -76,7 +75,8 @@ article{
   padding: 10px;
   margin-bottom: 10px;
   margin-top: 10px;
-  width: 860px;
+  // width: 860px;
+  width: 100%;
 }
 .glyphicon-folder-open,
 .glyphicon-user,
@@ -88,7 +88,6 @@ article{
 
 .sidebar {
   float: right;
-  width: 250px;
   margin-bottom: 50px;
 
   .popular {
