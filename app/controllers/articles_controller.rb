@@ -20,6 +20,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @articles = Article.order("created_at DESC")
   end
 
   def edit
