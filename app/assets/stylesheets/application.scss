@@ -6,3 +6,8 @@
  @import "./footer";
  @import "./articles";
  @import "article_body";
+
+ #wrapper {
+   width: 100%;
+   overflow: hidden;
+ }
