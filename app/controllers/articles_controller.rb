@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i(show edit update destroy)
   before_action :redirect_root, only: %i(edit)
   before_action :tag_list, only: %i(create update)
+  before_action :set_tags, only: %i(show search)
 
   def new
     if user_signed_in?
@@ -63,6 +64,10 @@ class ArticlesController < ApplicationController
 
   def tag_list
     tag_list = params[:tag_list].split(",")
+  end
+
+  def set_tags
+    @tags = Tag.order("created_at DESC")
   end
 
   def article_params
