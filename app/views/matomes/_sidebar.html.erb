@@ -28,18 +28,9 @@
 
                 <div class="tag">
                   <h3>注目のキーワード</h3>
-                  <a href="#"><span class="label label-info">仮想通貨</span></a>
-                  <a href="#"><span class="label label-info">Bitcoin</span></a>
-                  <a href="#"><span class="label label-info">ICO</span></a>
-                  <a href="#"><span class="label label-info">ブロックチェーン</span></a>
-                  <a href="#"><span class="label label-info">Ripple</span></a>
-                  <a href="#"><span class="label label-info">マイニング</span></a>
-                  <a href="#"><span class="label label-info">中国</span></a>
-                  <a href="#"><span class="label label-info">フィンテック</span></a>
-                  <a href="#"><span class="label label-info">取引所</span></a>
-                  <a href="#"><span class="label label-info">アルトコイン</span></a>
-                  <a href="#"><span class="label label-info">イーサリアム</span></a>
-                  <a href="#"><span class="label label-info">投資</span></a>
+                  <% @tags.each do | tag | %>
+                    <%= link_to tag.name, tag_matomes_path, class:"label label-info" %>
+                  <% end %>
                 </div>
 
               </div>
