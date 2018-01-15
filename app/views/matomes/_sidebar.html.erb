@@ -29,7 +29,7 @@
                 <div class="tag">
                   <h3>注目のキーワード</h3>
                   <% @tags.each do | tag | %>
-                    <%= link_to tag.name, tag_matomes_path, class:"label label-info" %>
+                    <%= link_to tag.name, tag_matome_path(tag), class:"label label-info" %>
                   <% end %>
                 </div>
 
