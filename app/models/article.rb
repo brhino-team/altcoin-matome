@@ -7,7 +7,7 @@ class Article < ApplicationRecord
   # mount_uploader :thum, ImageUploader
 
   def save_tags(tag)
-    current_tags = tags.pluck(:name) unless self.tags.nil?
+    current_tags = tags.pluck(:name) unless tags.nil?
     old_tags = current_tags - tag
     new_tags = tag - current_tags
 
