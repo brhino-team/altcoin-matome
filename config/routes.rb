@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     end
   end
   resources :matomes, only: %i(index show) do
-    collection do
+    member do
       get :tag
     end
   end
