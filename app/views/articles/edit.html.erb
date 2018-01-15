@@ -6,6 +6,10 @@
     <%= f.select :category_id, Category.all.collect { |c| [ c.name, c.id ] }, {class: 'form-control'} %>
   <%= f.cktext_area :body %>
   <h3>記事のタグ</h3>
+    <%= f.select :tag_ids, @article.tags.collect { |t| [ t.name, t.id] }, { class: 'form-control' } %>
+    <h4>↑は現在この記事に登録されているタグ<h4>
+    <%= f.select :tag_ids, Tag.order("name ASC").collect { |t| [ t.name, t.id] }, { class: 'form-control' } %>
+    <h4>現在のタグを維持する場合は現在のタグを↓にすべて入力。新たにタグを追加する場合は↑を確認し既にある場合はそのタグ名を、なければ新たなタグ名を↓に入力<h4>
     <ul id="article-tags-edit">
     </ul>
     <%= hidden_field_tag :tag_hidden, @tag_list %>
