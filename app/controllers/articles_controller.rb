@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.new(article_params)
     tag_list = params[:tag_list].split(",")
     if @article.save
-      @article.save_tags(tag_list)
+       @article.save_tags(tag_list)
       redirect_to root_path
     else
       render :new
@@ -28,10 +28,13 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    @tag_list = @article.tags.pluck(:name).join(",")
   end
 
   def update
+    tag_list = params[:tag_list].split(",")
     if @article.update(article_params)
+       @article.save_tags(tag_list)
       redirect_to root_path
     else
       render :edit
