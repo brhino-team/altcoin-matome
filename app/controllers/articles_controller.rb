@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   before_action :redirect_root, only: %i(edit)
   before_action :tag_list, only: %i(create update)
   before_action :set_tags, only: %i(show search)
+  before_action :set_articles, only: %i(show search)
 
   def new
     if user_signed_in?
@@ -24,8 +25,6 @@ class ArticlesController < ApplicationController
 
   def show
     @articles = Article.order("created_at DESC")
-    @article_first = Article.order("created_at DESC").first
-    @article_main = @articles[1, 2]
   end
 
   def edit
@@ -48,9 +47,6 @@ class ArticlesController < ApplicationController
 
   def search
     @articles = Article.where('title LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(10)
-    articles_second = Article.order("created_at DESC")
-    @article_first = Article.order("created_at DESC").first
-    @article_main = articles_second[1, 2]
   end
 
   private
@@ -68,6 +64,12 @@ class ArticlesController < ApplicationController
 
   def set_tags
     @tags = Tag.order("created_at DESC")
+  end
+
+  def set_articles
+    articles_second = Article.order("created_at DESC")
+    @article_first = articles_second.first
+    @article_main = articles_second[1, 2]
   end
 
   def article_params
