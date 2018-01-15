@@ -18,7 +18,7 @@ class Article < ApplicationRecord
 
     # Create new taggings:
     new_tags.each do |new_name|
-      article_category = Tag.find_or_create_by(name: new_name)
+      article_tag = Tag.find_or_create_by(name: new_name)
       tags << article_tag
     end
   end
