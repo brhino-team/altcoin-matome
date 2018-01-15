@@ -21,6 +21,8 @@ class ArticlesController < ApplicationController
 
   def show
     @articles = Article.order("created_at DESC")
+    @article_main = @articles[1, 2]
+    @article_first = Article.order("created_at DESC").first
   end
 
   def edit
@@ -41,6 +43,9 @@ class ArticlesController < ApplicationController
 
   def search
     @articles = Article.where('title LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(10)
+    @articles_second = Article.order("created_at DESC").includes(:category)
+    @article_first = Article.order("created_at DESC").first
+    @article_main = @articles_second[1, 2]
   end
 
   private
