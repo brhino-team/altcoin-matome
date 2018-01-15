@@ -7,5 +7,9 @@ Rails.application.routes.draw do
       get :search
     end
   end
-  resources :matomes, only: %i(index show)
+  resources :matomes, only: %i(index show) do
+    collection do
+      get :tags
+    end
+  end
 end
