@@ -1,4 +1,10 @@
 <%= render 'matomes/newest-article' %>
-<%= render 'matomes/articles' %>
+<% if @articles.present? %>
+  <%= render 'matomes/articles' %>
+<% else %>
+  <div class="col-sm-12 col-md-7 col-lg-8 container2">
+    <h2>検索に一致する記事はありませんでした。</h2>
+  </div>
+<% end %>
 <%= render 'matomes/sidebar' %>
 <%= paginate @articles %>
