@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require jquery-ui
+//= require tag-it
 //= require bootstrap-sprockets
 //= require ckeditor/init
+//= require turbolinks
+//= require_tree .
