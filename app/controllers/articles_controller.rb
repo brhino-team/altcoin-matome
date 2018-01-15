@@ -62,16 +62,16 @@ class ArticlesController < ApplicationController
     tag_list = params[:tag_list].split(",")
   end
 
-  def set_tags
-    @tags = Tag.order("created_at DESC")
-  end
-
   def set_articles
     articles_second = Article.order("created_at DESC")
     @article_first = articles_second.first
     @article_main = articles_second[1, 2]
   end
 
+  def set_tags
+      @tags = Tag.order("created_at DESC")
+  end
+  
   def article_params
     params.require(:article).permit(:body, :title, :thum, :user_name, :category_id)
   end
