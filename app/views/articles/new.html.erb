@@ -1,9 +1,12 @@
 <%= form_for @article do |f| %>
-<h3>投稿者</h3><%= f.text_field :user_name, class: "form_area" %>
-<h3>タイトル</h3><%= f.text_field :title, class: "form_area"%>
-<h3>サムネイル画像のリンク</h3><%= f.text_field :thum, class: "form_area" %>
-<h3>記事のジャンル</h3>
-  <%= f.select :category_id, Category.all.collect { |c| [ c.name, c.id ] }, {class: 'form-control'} %>
+  <h3>投稿者</h3><%= f.text_field :user_name, class: "form_area" %>
+  <h3>タイトル</h3><%= f.text_field :title, class: "form_area"%>
+  <h3>サムネイル画像のリンク</h3><%= f.text_field :thum, class: "form_area" %>
+  <h3>記事のジャンル</h3>
+    <%= f.select :category_id, Category.all.collect { |c| [ c.name, c.id ] }, {class: 'form-control'} %>
   <%= f.cktext_area :body %>
+  <h3>記事のタグ</h3>
+    <ul id="article-tags-new">
+    </ul>
   <%= f.submit '記事を投稿する', class: 'article_submit' %>
 <% end %>
