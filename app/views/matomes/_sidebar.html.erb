@@ -1,6 +1,7 @@
 <div class="col-sm-12 col-md-4 col-lg-3 sidebar">
-  <a href="https://zaif.jp?ac=nondct6bce" rel="nofollow">
-    <img src="https://d2p8taqyjofgrq.cloudfront.net/images/affiliate/banner/zaif_D_234x60.png?ac=nondct6bce" /></a>
+  <%= link_to "https://zaif.jp?ac=nondct6bce", rel: "nofollow" do %>
+    <%= image_tag("https://d2p8taqyjofgrq.cloudfront.net/images/affiliate/banner/zaif_D_234x60.png?ac=nondct6bce") %>
+  <% end %>
   <h3 class="popular">人気記事</h3>
   <div class="contents_s">
     <div class="access_rank_post">
@@ -16,13 +17,13 @@
               <% @articles.first(3).each.with_index(1) do | article, i | %>
                 <%= link_to article_path(article) do %>
                     <h4><%= i %>.<%= article.title %></br><i class="glyphicon glyphicon-user"></i><%= article.user_name %></h4>
-
                   <% end %>
               <% end %>
 
               <div class="ad_zaif">
-                <a href="https://coincheck.com/?c=huHk3QiSzpI" target="_blank">
-                  <img src="https://coincheck.com/images/affiliates/03_cc_banner_250x250.png" alt="ビットコイン取引高日本一の仮想通貨取引所 coincheck bitcoin"></a>
+                <%= link_to "https://coincheck.com/?c=huHk3QiSzpI", target: "_blank" do%>
+                  <%= image_tag("https://coincheck.com/images/affiliates/03_cc_banner_250x250.png", alt: "ビットコイン取引高日本一の仮想通貨取引所 coincheck bitcoin") %>
+                <% end %>
               </div>
 
                 <div class="tag">
