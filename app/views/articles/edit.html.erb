@@ -5,5 +5,8 @@
 <h3>記事のジャンル</h3>
   <%= f.select :category_id, Category.all.collect { |c| [ c.name, c.id ] }, {class: 'form-control'} %>
   <%= f.cktext_area :body %>
+<h3>記事のタグ</h3>
+  <ul id="article-tags-edit">
+  </ul>
   <%= f.submit '記事を更新する', class: 'article_sumit' %>
 <% end %>
