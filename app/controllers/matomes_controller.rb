@@ -1,5 +1,5 @@
 class MatomesController < ApplicationController
-  before_action :set_tags, only: %i(index show)
+  before_action :set_tags, only: %i(index show tag)
 
   def index
     @articles = Article.order("created_at DESC").includes(:category).page(params[:page]).per(10)
@@ -12,6 +12,13 @@ class MatomesController < ApplicationController
     articles_second = Article.order("created_at DESC")
     @article_first = Article.order("created_at DESC").first
     @article_main = articles_second[1, 2]
+  end
+
+  def tag
+    articles_second = Article.order("created_at DESC")
+    @article_first = Article.order("created_at DESC").first
+    @article_main = articles_second[1, 2]
+    @articles= Article.from_tag(params[:id]).page(params[:page])
   end
 
   private
