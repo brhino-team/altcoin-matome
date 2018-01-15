@@ -47,9 +47,9 @@ class ArticlesController < ApplicationController
 
   def search
     @articles = Article.where('title LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(10)
-    @articles_second = Article.order("created_at DESC")
+    articles_second = Article.order("created_at DESC")
     @article_first = Article.order("created_at DESC").first
-    @article_main = @articles_second[1, 2]
+    @article_main = articles_second[1, 2]
   end
 
   private
