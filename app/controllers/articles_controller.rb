@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i(show edit update destroy)
   before_action :redirect_root, only: %i(edit)
-  before_action :tag_listk, only: %i(create update)
+  before_action :tag_list, only: %i(create update)
 
   def new
     if user_signed_in?
