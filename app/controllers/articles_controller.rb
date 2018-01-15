@@ -12,7 +12,9 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.new(article_params)
+    tag_list = params[:tag_list].split(",")
     if @article.save
+      @article.save_tags(tag_list)
       redirect_to root_path
     else
       render :new
