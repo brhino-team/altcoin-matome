@@ -15,10 +15,10 @@ class MatomesController < ApplicationController
   end
 
   def tag
+    @articles= Article.from_tag(params[:id]).page(params[:page])
     articles_second = Article.order("created_at DESC")
     @article_first = Article.order("created_at DESC").first
     @article_main = articles_second[1, 2]
-    @articles= Article.from_tag(params[:id]).page(params[:page])
   end
 
   private
