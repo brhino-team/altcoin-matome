@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i(show edit update destroy)
   before_action :redirect_root, only: %i(edit)
+  before_action :tag_listk, only: %i(create update)
 
   def new
     if user_signed_in?
@@ -12,7 +13,6 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.new(article_params)
-    tag_list = params[:tag_list].split(",")
     if @article.save
        @article.save_tags(tag_list)
       redirect_to root_path
@@ -32,7 +32,6 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    tag_list = params[:tag_list].split(",")
     if @article.update(article_params)
        @article.save_tags(tag_list)
       redirect_to root_path
@@ -60,6 +59,10 @@ class ArticlesController < ApplicationController
 
   def redirect_root
     redirect_to root_path unless user_signed_in?
+  end
+
+  def tag_list
+    tag_list = params[:tag_list].split(",")
   end
 
   def article_params
