@@ -21,8 +21,8 @@ class ArticlesController < ApplicationController
 
   def show
     @articles = Article.order("created_at DESC")
-    @article_main = @articles[1, 2]
     @article_first = Article.order("created_at DESC").first
+    @article_main = @articles[1, 2]
   end
 
   def edit
