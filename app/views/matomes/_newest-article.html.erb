@@ -1,15 +1,14 @@
-
+<div class="mobile-margin" >
+</div>
 <div class="container">
   <div class="row">
 		<div class="col-sm-12 col-md-5 col-lg-4">
 			<div class="col-md-12 col-lg-12 featured-article" style="padding-left:0px; padding-right:0px" >
-        <% if @article_first.thum.present? %>
-          <%= link_to article_path(@article_first) do %>
-            <%= image_tag article.thum, width: 260, height: 125 %>
-          <% end %>
-        <% else %>
-          <%= link_to article_path(@article_first) do %>
-          <%= image_tag("http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg", class:"media-object", alt: "...",  width: "100%", height: "100%") %>
+        <%= link_to article_path(@article_first) do %>
+          <% if @article_first.thum.present? %>
+            <%= image_tag @article_first.thum, width: "100%", height: "100%" %>
+          <% else %>
+            <%= image_tag("http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg", class:"media-object", alt: "...",  width: "100%", height: "100%") %>
           <% end %>
         <% end %>
 				<div class="block-title">
@@ -21,12 +20,10 @@
 			<ul class="media-list main-list">
         <% @article_main.each do |article| %>
     			  <li class="media">
-              <% if article.thum.present? %>
-                <%= link_to article_path(article), class:"pull-left" do %>
+              <%= link_to article_path(article), class:"pull-left" do %>
+                <% if article.thum.present? %>
                   <%= image_tag article.thum, width: 150, height: 90 %>
-                <% end %>
-              <% else %>
-                <%= link_to article_path(article), class:"pull-left" do %>
+                <% else %>
                   <%= image_tag("http://d-kamiichi.com/wp-content/uploads/2016/05/marvel-ironman-movie-free.jpg", class:"media-object", alt: "...",  width: 150, height: 90) %>
                 <% end %>
               <% end %>

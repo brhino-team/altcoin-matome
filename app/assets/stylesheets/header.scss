@@ -20,6 +20,10 @@
   color: black;
 }
 
+.mobile-title {
+  display: none;
+}
+
 .topper {
   display: flex;
   justify-content: space-between;
@@ -71,23 +75,34 @@
   -webkit-font-smoothing: antialiased;
 }
 
-@media screen and(max-width: 970px){
+@media screen and(max-width: 768px){
   .header {
     position: fixed;
     z-index: 1000;
     width: 100%;
-  }
 
-  .search-for-mobile {
-    input#keyword {
-      width: 70%;
-      margin-left: 30px;
+    .mobile-title {
+      display: initial;
+      color: white;
+      font-size: 35px;
+      margin-left: 78px;
+    }
+
+    .search-for-mobile {
+      input#keyword {
+        width: 70%;
+        margin-left: 30px;
+      }
+    }
+
+    .list-for-mobile {
+      li {
+        padding-left: 20px;
+      }
     }
   }
 
-  .list-for-mobile {
-    li {
-      padding-left: 20px;
-    }
+  .mobile-margin {
+    margin-top: 70px;
   }
 }
