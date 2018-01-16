@@ -16,8 +16,9 @@
   padding-right: 8px;
 }
 
-.Title {
+a.Title {
   color: black;
+  text-decoration: none;
 }
 
 .mobile-title {
@@ -83,9 +84,13 @@
 
     .mobile-title {
       display: initial;
-      color: white;
       font-size: 35px;
       margin-left: 78px;
+    }
+
+    .title-link {
+      color: white;
+      text-decoration: none;
     }
 
     .search-for-mobile {
