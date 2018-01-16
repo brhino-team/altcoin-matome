@@ -27,8 +27,11 @@
                       <section>
                           <i class="glyphicon glyphicon-folder-open"></i><%= article.category.name %>
                           <i class="glyphicon glyphicon-user"></i><%= article.user_name %>
-                          <i class="glyphicon glyphicon-calendar"></i><%= article.created_at.strftime('%Y/%m/%d') %>
+                          <i class="glyphicon glyphicon-calendar"></i><%= article.created_at.strftime('%Y/%m/%d') %></br>
                           <!-- <i class="glyphicon glyphicon-eye-open"></i>PV数 -->
+                          <% article.tags.each do | tag | %>
+                            <%= link_to tag.name, tag_matome_path(tag), class:"label label-info" %>
+                          <% end %>
                           <%= link_to  'More...', article_path(article) , class: "btn btn-default btn-sm pull-right" %>
                       </section>
                   </div>
