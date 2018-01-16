@@ -22,4 +22,6 @@ class Article < ApplicationRecord
       tags << article_tag
     end
   end
+
+  scope :from_tag, -> (tag_id)  { where(id: article_ids = ArticleTag.where(tag_id: tag_id).select(:article_id))}
 end

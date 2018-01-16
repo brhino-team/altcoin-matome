@@ -6,6 +6,8 @@
     <%= f.select :category_id, Category.all.collect { |c| [ c.name, c.id ] }, {class: 'form-control'} %>
   <%= f.cktext_area :body %>
   <h3>記事のタグ</h3>
+    <%= f.select :tag_ids, Tag.order("name ASC").collect { |t| [ t.name, t.id] }, { class: 'form-control' } %>
+    <h4>↑からタグを確認、すでにあるタグを登録する場合はその名前を↓に入力、新たにタグを追加する場合は新たな名前を↓に入力<h4>
     <ul id="article-tags-new">
     </ul>
   <%= f.submit '記事を投稿する', class: 'article_submit' %>
