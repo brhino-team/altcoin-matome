@@ -69,9 +69,9 @@ class ArticlesController < ApplicationController
   end
 
   def set_tags
-      @tags = Tag.order("created_at DESC")
+      @tags = Tag.order("created_at DESC").limit(20)
   end
-  
+
   def article_params
     params.require(:article).permit(:body, :title, :thum, :user_name, :category_id)
   end

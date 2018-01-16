@@ -22,6 +22,6 @@ class MatomesController < ApplicationController
   end
 
   def set_tags
-    @tags = Tag.order("created_at DESC")
+    @tags = Tag.order("created_at DESC").limit(20)
   end
 end
