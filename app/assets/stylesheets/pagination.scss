@@ -1,0 +1,57 @@
+.pagination {
+  /* For IE */
+  js-display: flex;
+  display: flex;
+}
+.pagination li{
+  list-style-type: none;
+  flex: 1;
+}
+.pagination li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and ( max-width: 630px ) {
+
+  /* 全てのli要素を消す */
+  .pagination li {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  /* 必要なli要素を消す */
+  .pagination li.active,
+  .pagination li:first-of-type,
+  .pagination li:last-of-type,
+  .pagination li:nth-of-type(2),
+  .pagination li:nth-last-of-type(2){
+    position: static;
+    top: initial;
+    left: initial;
+  }
+}
+
+.pagination li {
+
+ /* For IE */
+ display: flex;
+ justify-content: center;
+}
+
+.pagination a {
+  /* For IE */
+  flex: 1;
+}
+
+ul {
+   -webkit-padding-start: 0px;
+}
+
+@media screen and (max-width: 970px) {
+  .pagination {
+    margin: 30px 25%;
+  }
+}
