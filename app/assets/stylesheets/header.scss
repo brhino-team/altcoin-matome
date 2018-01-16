@@ -72,6 +72,12 @@
 }
 
 @media screen and(max-width: 970px){
+  .header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+  }
+
   .search-for-mobile {
     input#keyword {
       width: 70%;
