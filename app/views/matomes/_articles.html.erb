@@ -16,7 +16,7 @@
                       <% end %>
                     <% end %>
                   </div>
-                  <div class="col-sm-12 col-md-8">
+                  <div class="col-sm-12 col-md-8 section-box">
                       <!-- <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span> -->
                       <%= link_to article_path(article), class:"article-title-link" do %>
                         <h4><%= article.title %></h4>
@@ -25,7 +25,7 @@
                         <%== strip_tags(article.body.gsub(/(\s)/," ")).truncate(100) %>
                         <%= link_to  'More...', article_path(article) , class: "btn btn-default btn-sm pull-right" %>
                       </div>
-                      <section>
+                      <section class="section-bottom">
                           <i class="glyphicon glyphicon-folder-open"></i><%= article.category.name %>
                           <i class="glyphicon glyphicon-user"></i><%= article.user_name %>
                           <i class="glyphicon glyphicon-calendar"></i><%= article.created_at.strftime('%Y/%m/%d') %></br>

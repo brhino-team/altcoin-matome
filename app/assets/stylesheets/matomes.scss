@@ -88,6 +88,16 @@
     .btn-sm {
       padding: 1px 3px;
     }
+
+    .section-box {
+      position: relative;
+      height: 170px;
+    }
+
+    .section-bottom {
+      position: absolute;
+      bottom: 0;
+    }
   }
   .glyphicon-folder-open,
   .glyphicon-user,
