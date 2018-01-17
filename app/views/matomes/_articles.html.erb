@@ -7,7 +7,7 @@
         <% @articles.each do |article| %>
           <article>
               <div class="row">
-                  <div class="col-sm-12 col-md-4">
+                  <div class="article-image col-sm-12 col-md-4">
                     <%= link_to article_path(article) do %>
                       <% if article.thum.present? %>
                           <%= image_tag article.thum, width: "100%", height: "100%" %>
@@ -16,7 +16,7 @@
                       <% end %>
                     <% end %>
                   </div>
-                  <div class="col-sm-12 col-md-8 section-box">
+                  <div class="section-box col-sm-12 col-md-8">
                       <!-- <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span> -->
                       <%= link_to article_path(article), class:"article-title-link" do %>
                         <h4><%= article.title %></h4>

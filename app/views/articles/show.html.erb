@@ -4,6 +4,9 @@
 
 
 <div class="col-sm-12 col-md-8 col-lg-9 article_body">
+  <%if @article.thum.present? %>
+    <%= image_tag @article.thum, class:"show-image"%>
+  <% end %>
   <div class="title">
     <h1><%= @article.title %></h1>
   </div>
