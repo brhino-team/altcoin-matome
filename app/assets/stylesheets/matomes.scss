@@ -80,6 +80,10 @@
     margin-bottom: 10px;
     margin-top: 10px;
     width: 100%;
+
+    .article-title-link {
+      text-decoration: none;
+    }
   }
   .glyphicon-folder-open,
   .glyphicon-user,
@@ -129,6 +133,10 @@
   }
   .ad_zaif{
     padding-bottom: 10px;
+  }
+
+  a.article-title-link {
+    text-decoration: none;
   }
 }
 
@@ -217,8 +225,11 @@
     padding: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
-    // width: 860px;
     width: 100%;
+
+    .article-title-link {
+      text-decoration: none;
+    }
   }
   .glyphicon-folder-open,
   .glyphicon-user,
@@ -275,5 +286,9 @@
 
   .ad_width {
     width: 100%;
+  }
+
+  a.article-title-link {
+    text-decoration: none;
   }
 }
