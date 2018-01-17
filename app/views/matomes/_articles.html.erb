@@ -7,7 +7,7 @@
         <% @articles.each do |article| %>
           <article>
               <div class="row">
-                  <div class="col-sm-12 col-md-4">
+                  <div class="article-image col-sm-12 col-md-4">
                     <%= link_to article_path(article) do %>
                       <% if article.thum.present? %>
                           <%= image_tag article.thum, width: "100%", height: "100%" %>
@@ -16,15 +16,16 @@
                       <% end %>
                     <% end %>
                   </div>
-                  <div class="col-sm-6 col-md-8">
-                      <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span>
-                      <%= link_to article_path(article) do %>
+                  <div class="section-box col-sm-12 col-md-8">
+                      <!-- <span class="label label-default pull-right"><i class="glyphicon glyphicon-comment"></i>50</span> -->
+                      <%= link_to article_path(article), class:"article-title-link" do %>
                         <h4><%= article.title %></h4>
                       <% end %>
                       <div class="thum_body">
                         <%== strip_tags(article.body.gsub(/(\s)/," ")).truncate(100) %>
+                        <%= link_to  'More...', article_path(article) , class: "btn btn-default btn-sm pull-right" %>
                       </div>
-                      <section>
+                      <section class="section-bottom">
                           <i class="glyphicon glyphicon-folder-open"></i><%= article.category.name %>
                           <i class="glyphicon glyphicon-user"></i><%= article.user_name %>
                           <i class="glyphicon glyphicon-calendar"></i><%= article.created_at.strftime('%Y/%m/%d') %></br>
@@ -32,7 +33,6 @@
                           <% article.tags.each do | tag | %>
                             <%= link_to tag.name, tag_matome_path(tag), class:"label label-info" %>
                           <% end %>
-                          <%= link_to  'More...', article_path(article) , class: "btn btn-default btn-sm pull-right" %>
                       </section>
                   </div>
               </div>
