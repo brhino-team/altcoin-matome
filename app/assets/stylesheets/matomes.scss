@@ -11,7 +11,7 @@
   .container2 {
     float: left;
     .thum_body{
-      width: 85%;
+      width: 100%;
       font-size: 15px;
       h2{
         font-size: 15px;
@@ -83,6 +83,10 @@
 
     .article-title-link {
       text-decoration: none;
+    }
+
+    .btn-sm {
+      padding: 1px 3px;
     }
   }
   .glyphicon-folder-open,
@@ -157,7 +161,7 @@
   .container2 {
     float: left;
     .thum_body{
-      width: 85%;
+      width: 100%;
       font-size: 15px;
       h2{
         font-size: 15px;
@@ -229,6 +233,10 @@
 
     .article-title-link {
       text-decoration: none;
+    }
+
+    .btn-sm {
+      padding: 1px 3px;
     }
   }
   .glyphicon-folder-open,
